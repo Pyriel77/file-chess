@@ -11,26 +11,25 @@ public class ChessResults {
     static class Competitor {
         private String name;
         private int points;
-        
+
         public Competitor(String name, int points) {
             this.name = name;
             this.points = points;
-
         }
+
         public String getName() {
             return name;
         }
+
         public double getPoints() {
             return this.points;
         }
     }
 
-
-    public List<String> getCompetitorsNamesFromFile(String fileName){
+    public List<String> getCompetitorsNamesFromFile(String fileName) {
 
         List<Competitor> competitors = new ArrayList<>();
         List<String> names = new ArrayList<>();
-
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line = "";
